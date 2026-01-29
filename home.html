@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Heritage Gents | Your Guide to Modern Men's Style</title>
+    <meta name="description"
+        content="Explore Heritage Gents for expert advice on men's fashion, style guides, grooming tips, and watch reviews. Your essential resource for the modern man in the USA.">
+    <meta name="keywords"
+        content="men's fashion, men's style, grooming, watches, suit guide, men's clothing USA, heritage gents">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- Custom Styles --- */
+
+        :root {
+            --primary-color: #003f5c;
+            /* Deep Navy Blue */
+            --accent-color: #ffa600;
+            /* Gold/Mustard */
+            --dark-gray: #343a40;
+            --light-gray: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-gray);
+            color: #212529;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* --- Header/Navbar --- */
+        .navbar-custom {
+            background-color: var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-custom .navbar-brand {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+        }
+
+        .navbar-custom .navbar-brand:hover {
+            color: #ffffff;
+        }
+
+        .navbar-custom .nav-link {
+            color: #ffffff;
+            font-weight: 400;
+            cursor: pointer;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-custom .nav-link:hover,
+        .navbar-custom .nav-link.active {
+            color: var(--accent-color);
+        }
+
+        /* --- Page Navigation System --- */
+        .page {
+            display: none;
+            /* Hide all pages by default */
+        }
+
+        .page.active {
+            display: block;
+            /* Show only the active page */
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* --- Homepage Hero --- */
+        .hero-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 6rem 1rem;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            color: var(--accent-color);
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 1rem auto 2rem;
+        }
+
+        .btn-accent {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .btn-accent:hover {
+            background-color: #e69500;
+            border-color: #e69500;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Content Sections --- */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .article-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .article-card img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .article-card .card-title {
+            color: var(--primary-color);
+        }
+
+        .article-card .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .article-card .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* --- Article & Legal Page Styling --- */
+        .article-content,
+        .legal-content {
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .article-content img {
+            border-radius: 10px;
+        }
+
+        .article-content h1,
+        .legal-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content h2,
+        .legal-content h2 {
+            color: var(--dark-gray);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .article-content p,
+        .legal-content p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .legal-content ul {
+            padding-left: 2rem;
+            line-height: 1.7;
+        }
+
+        /* --- Footer --- */
+        .footer-custom {
+            background-color: var(--dark-gray);
+            color: #c0c0c0;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            margin-top: 4rem;
+        }
+
+        .footer-custom h5 {
+            color: var(--accent-color);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-custom p {
+            font-size: 0.9rem;
+        }
+
+        .footer-custom a {
+            color: #f8f9fa;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .footer-custom a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .footer-custom .list-unstyled li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #4a4a4a;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ======== HEADER / NAVIGATION ======== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+            <div class="container">
+                <img src="images/logo.png" alt="logo" width="190">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" data-page="page-home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-page="page-article-1">The Modern Suit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-page="page-article-2">Grooming Essentials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-page="page-article-3">Guide to Watches</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-page="page-about">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======== MAIN CONTENT (ALL PAGES) ======== -->
+    <main>
+
+        <!-- ======== PAGE 1: HOME ======== -->
+        <section id="page-home" class="page active">
+
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="container">
+                    <h1>Style is a Heritage</h1>
+                    <p>Welcome to Heritage Gents, your definitive source for timeless men's fashion, grooming, and
+                        lifestyle advice. Discover your signature look.</p>
+                    <a href="#" class="btn btn-accent btn-lg" data-page="page-article-1">Read Our Latest Guide</a>
+                </div>
+            </div>
+
+            <!-- Article Previews -->
+            <div class="content-section">
+                <div class="container">
+                    <h2 class="text-center mb-5" style="color: var(--primary-color);">Explore Our Guides</h2>
+                    <div class="row">
+
+                        <!-- Article 1 Card -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card article-card h-100">
+                                <img src="/images/1.jpg" class="card-img-top" alt="Man wearing a modern suit">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">The Art of the Modern Suit</h5>
+                                    <p class="card-text">From the perfect fit to the right fabric, discover everything
+                                        you need to know about selecting a suit that defines confidence.</p>
+                                    <a href="#" class="btn btn-outline-primary mt-auto" data-page="page-article-1">Read
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 2 Card -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card article-card h-100">
+                                <img src="/images/2.jpg" class="card-img-top" alt="Men's grooming products">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Essential Grooming for the Modern Man</h5>
+                                    <p class="card-text">Grooming is more than just a routine; it's a ritual. We break
+                                        down the essentials for skincare, shaving, and haircare.</p>
+                                    <a href="#" class="btn btn-outline-primary mt-auto" data-page="page-article-2">Read
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 3 Card -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card article-card h-100">
+                                <img src="/images/3.jpg" class="card-img-top" alt="Close up of a luxury watch">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">A Gentleman's Guide to Watches</h5>
+                                    <p class="card-text">A watch is the ultimate expression of personal style. Learn the
+                                        difference between movements, styles, and how to start your collection.</p>
+                                    <a href="#" class="btn btn-outline-primary mt-auto" data-page="page-article-3">Read
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Section -->
+            <div class="content-section" style="background-color: #ffffff;">
+                <div class="container">
+                    <h2 class="text-center mb-5" style="color: var(--primary-color);">Discover Your Style</h2>
+                    <div class="row text-center">
+                        <div class="col-md-3 col-6 mb-4">
+                            <img src="/images/4.jpg" class="img-fluid rounded-circle mb-3" alt="Suits">
+                            <h5>Tailoring</h5>
+                        </div>
+                        <div class="col-md-3 col-6 mb-4">
+                            <img src="/images/5.jpg" class="img-fluid rounded-circle mb-3" alt="Shoes">
+                            <h5>Footwear</h5>
+                        </div>
+                        <div class="col-md-3 col-6 mb-4">
+                            <img src="/images/6.jpg" class="img-fluid rounded-circle mb-3" alt="Watches">
+                            <h5>Timepieces</h5>
+                        </div>
+                        <div class="col-md-3 col-6 mb-4">
+                            <img src="/images/7.jpg" class="img-fluid rounded-circle mb-3" alt="Casual Wear">
+                            <h5>Casuals</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ======== PAGE 2: ARTICLE 1 (THE SUIT) ======== -->
+        <section id="page-article-1" class="page">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="article-content">
+                            <h1 class="mb-3">The Art of the Modern Suit: A Comprehensive Guide</h1>
+                            <img src="/images/1.jpg" class="img-fluid rounded mb-4"
+                                alt="Man in a well-fitted modern suit">
+
+                            <p class="lead">The suit is the single most important garment in a man's wardrobe. It speaks
+                                of respect, professionalism, and an attention to detail. But the "modern suit" is a
+                                different beast than the one your grandfather wore. It's leaner, more comfortable, and
+                                infinitely more versatile. This guide will cover the essential pillars of finding the
+                                perfect modern suit.</p>
+
+                            <h2>1. The Fit is Everything</h2>
+                            <p>You could spend $5,000 on a suit, but if it doesn't fit, it will look worse than a $500
+                                suit that has been tailored to perfection. "Fit" is the cornerstone of suit-wearing.</p>
+                            <ul>
+                                <li><strong>Shoulders:</strong> The shoulder seam of the jacket should end precisely
+                                    where your natural shoulder ends. If it's too short, it will pinch. If it's too
+                                    long, you'll get a "divot" or a sag, which looks sloppy.</li>
+                                <li><strong>Jacket Length:</strong> When standing with your arms at your sides, you
+                                    should be able to curl your fingers and cup the bottom of the jacket. This is a
+                                    traditional rule; modern, more fashion-forward suits might be a fraction shorter.
+                                </li>
+                                <li><strong>Sleeve Length:</strong> Your jacket sleeve should end to reveal about 1/4 to
+                                    1/2 inch of your shirt cuff. This small detail creates a clean, intentional line.
+                                </li>
+                                <li><strong>Trousers:</strong> The trouser break (where the pant leg meets the shoe) is
+                                    a matter of personal taste. A "no break" or "slight break" is the most modern look,
+                                    where the pant just kisses the top of the shoe. Avoid a "full break" where fabric
+                                    puddles around your ankle.</li>
+                            </ul>
+
+                            <h2>2. Fabric and Material</h2>
+                            <p>The fabric dictates the suit's formality, seasonality, and comfort.</p>
+                            <ul>
+                                <li><strong>Wool:</strong> The workhorse. A medium-weight (or "four-season") wool suit
+                                    in navy or charcoal is the perfect first suit. It's durable, breathable, and drapes
+                                    beautifully.</li>
+                                <li><strong>Cotton:</strong> A more casual option, perfect for summer. A cotton suit in
+                                    khaki or light blue is a staple for daytime events or warm-weather offices. Be
+                                    aware: it wrinkles easily, which is part of its charm.</li>
+                                <li><strong>Linen:</strong> The ultimate summer fabric. It's incredibly lightweight and
+                                    breathable. Like cotton, it wrinkles just by looking at it, but this is expected and
+                                    part of its relaxed, "sprezzatura" vibe.</li>
+                                <li><strong>Flannel/Tweed:</strong> Reserved for fall and winter. These heavier,
+                                    textured fabrics add visual interest and, more importantly, warmth. A grey flannel
+                                    suit is a timeless classic.</li>
+                            </ul>
+
+                            <h2>3. Color and Pattern</h2>
+                            <p>For your first suits, build a foundation of versatility.</p>
+                            <ul>
+                                <li><strong>Navy Blue:</strong> Your first suit. Period. It's appropriate for
+                                    interviews, weddings, boardrooms, and cocktail parties. It's formal without being
+                                    severe.</li>
+                                <li><strong>Charcoal Grey:</strong> Your second suit. It carries the same authority as
+                                    navy and is just as versatile.</li>
+                                <li><strong>Light Grey / Mid-Grey:</strong> A great third option, especially for warmer
+                                    months or daytime wear.</li>
+                                <li><strong>Patterns:</strong> Once you have your solids, you can explore patterns. A
+                                    subtle pinstripe or a windowpane check adds personality. For a more "heritage" look,
+                                    a Glen plaid or houndstooth is a fantastic choice.</li>
+                            </ul>
+
+                            <h2>4. The Finishing Touches</h2>
+                            <p>A suit is a canvas; accessories are the paint. A crisp white or light blue shirt is the
+                                standard. A quality leather shoe (Oxfords for formality, Derbies for versatility) is
+                                non-negotiable. The tie, pocket square, and watch are where you express your
+                                personality. Don't overdo it—often, a simple, elegant combination is the most powerful.
+                            </p>
+                            <p>In conclusion, the modern suit is an investment in yourself. It's a tool that can be
+                                wielded to show respect for an occasion and, more importantly, for yourself. Prioritize
+                                fit, choose a versatile fabric, and you'll have a garment that serves you for years to
+                                come.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== PAGE 3: ARTICLE 2 (GROOMING) ======== -->
+        <section id="page-article-2" class="page">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="article-content">
+                            <h1>Essential Grooming for the Modern Man</h1>
+                            <img src="/images/2.jpg" class="img-fluid rounded mb-4"
+                                alt="Men's grooming products on a shelf">
+
+                            <p class="lead">In the 21st century, "grooming" for men has evolved far beyond a simple
+                                shave and a splash of aftershave. It's about self-care, wellness, and presenting the
+                                best version of yourself to the world. A solid grooming routine isn't vanity; it's a
+                                form of discipline and self-respect. Here is a detailed guide to the essentials.</p>
+
+                            <h2>1. Skincare: The Foundation</h2>
+                            <p>Your face is the first thing people see. A basic, effective skincare routine takes less
+                                than five minutes and pays huge dividends.</p>
+                            <ul>
+                                <li><strong>Cleanse:</strong> Ditch the bar soap. Bar soap strips your face of its
+                                    natural oils, leading to dryness or over-production of oil (breakouts). Use a gentle
+                                    facial cleanser designed for your skin type (oily, dry, or combination) every
+                                    morning and night.</li>
+                                <li><strong>Moisturize:</strong> After cleansing, you must rehydrate. A moisturizer
+                                    locks in water and creates a protective barrier. In the morning, use a moisturizer
+                                    with SPF 30 or higher. Sun damage is the number one cause of premature aging. No
+                                    exceptions, even on cloudy days.</li>
+                                <li><strong>Exfoliate (1-2x per week):</strong> Use a gentle facial scrub to remove dead
+                                    skin cells. This prevents clogged pores, reduces ingrown hairs from shaving, and
+                                    allows your moisturizer to work more effectively.</li>
+                            </ul>
+
+                            <h2>2. The Shave (or Beard Care)</h2>
+                            <p>Whether you're clean-shaven or bearded, this area needs attention.</p>
+                            <h3>For the Clean-Shaven Man:</h3>
+                            <ul>
+                                <li><strong>Prep:</strong> The best time to shave is after a hot shower, when your pores
+                                    are open and whiskers are soft. Apply a quality shave cream or gel (not the cheap
+                                    foam in a can) to create a protective lather.</li>
+                                <li><strong>Technique:</strong> Use a sharp, quality razor. Shave *with* the grain (the
+                                    direction your hair grows) on your first pass. If you need a closer shave, re-lather
+                                    and shave *across* the grain. Shaving *against* the grain is the primary cause of
+                                    razor burn and ingrown hairs.</li>
+                                <li><strong>Post-Shave:</strong> Rinse with cold water to close your pores. Pat your
+                                    face dry (don't rub) and apply an alcohol-free aftershave balm or a light
+                                    moisturizer to soothe the skin.</li>
+                            </ul>
+                            <h3>For the Bearded Man:</h3>
+                            <ul>
+                                <li><strong>Wash:</strong> Your beard hair is different from your head hair. Use a
+                                    dedicated beard wash, as regular shampoo can be too harsh for the skin underneath.
+                                </li>
+                                <li><strong>Condition:</strong> Apply beard oil daily. This is non-negotiable. Beard oil
+                                    moisturizes the skin *under* the beard, eliminating itch and "beardruff," while also
+                                    softening the beard hair itself.</li>
+                                <li><strong>Style:</strong> A beard balm, which has a light hold, can be used to tame
+                                    flyaways and shape your beard.</li>
+                                <li><strong>Trim:</strong> Even if you're growing it out, a regular trim (either at home
+                                    with good scissors or at a barber) is essential to maintain its shape and remove
+                                    split ends.</li>
+                            </ul>
+
+                            <h2>3. Haircare</h2>
+                            <p>Keep your hair clean and styled, and get it cut regularly. Find a good barber and stick
+                                with them. A regular trim every 3-5 weeks keeps your style looking sharp and
+                                intentional, not "grown-out." Don't overwash your hair; for most men, 2-4 times a week
+                                with shampoo is plenty. Use conditioner to keep it healthy.</p>
+
+                            <h2>4. Fragrance</h2>
+                            <p>Fragrance is the final, invisible touch. The key is subtlety. Your scent should be
+                                discovered, not announced.</p>
+                            <ul>
+                                <li><strong>Eau de Toilette (EDT) vs. Eau de Parfum (EDP):</strong> An EDP has a higher
+                                    concentration of fragrance oil and will last longer (6-8 hours). An EDT is lighter
+                                    and better for daytime or office wear (3-5 hours).</li>
+                                <li><strong>Application:</strong> Apply to pulse points: the base of the neck, behind
+                                    the ears, and the inner wrists. Do *not* rub your wrists together; it "crushes" the
+                                    scent molecules. One or two sprays is all you need.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== PAGE 4: ARTICLE 3 (WATCHES) ======== -->
+        <section id="page-article-3" class="page">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="article-content">
+                            <h1>A Gentleman's Guide to Watches: More Than Just Telling Time</h1>
+                            <img src="/images/3.jpg" class="img-fluid rounded mb-4" alt="A collection of men's watches">
+
+                            <p class="lead">In an age where your phone always displays the precise time, a watch has
+                                become something more. It's a statement of personal style, an appreciation for
+                                craftsmanship, and a functional piece of "jewelry" for men. Choosing a watch can be
+                                daunting, but this guide will simplify the core concepts.</p>
+
+                            <h2>1. The Movement: What Makes It Tick</h2>
+                            <p>The "movement" is the internal engine of the watch. There are two main types you'll
+                                encounter.</p>
+                            <ul>
+                                <li><strong>Quartz:</strong> This is a battery-powered movement. Quartz watches are
+                                    incredibly accurate, durable, and low-maintenance (you just change the battery every
+                                    few years). They are typically more affordable. For a reliable, "grab-and-go" watch,
+                                    quartz is a fantastic choice.</li>
+                                <li><strong>Mechanical (Automatic):</strong> This is where the "heritage" comes in. A
+                                    mechanical watch is powered by a complex system of springs and gears—no battery.
+                                    <ul>
+                                        <li>An "automatic" (or "self-winding") mechanical watch is powered by the
+                                            natural motion of your wrist as you wear it. A small rotor inside spins,
+                                            winding the mainspring.</li>
+                                        <li>A "manual-wind" watch requires you to turn the crown every day or two to
+                                            wind the spring.</li>
+                                    </ul>
+                                    Aficionados appreciate mechanical watches for their intricate craftsmanship and the
+                                    "living" component of a tiny, ticking machine on their wrist.
+                                </li>
+                            </ul>
+
+                            <h2>2. The Holy Trinity of Watch Styles</h2>
+                            <p>While there are countless sub-genres, most men's watches fall into one of three main
+                                categories. A good collection has one of each.</p>
+
+                            <h3>The Dress Watch</h3>
+                            <ul>
+                                <li><strong>The Goal:</strong> Elegance and subtlety.</li>
+                                <li><strong>Characteristics:</strong> Thin (to slide easily under a shirt cuff), simple
+                                    (often time-only, no complications), and has a leather strap. The dial is typically
+                                    white, black, or silver, with simple indices (markers) instead of large numerals.
+                                </li>
+                                <li><strong>When to Wear:</strong> With a suit, at formal events, weddings, or in a
+                                    professional boardroom.</li>
+                            </ul>
+
+                            <h3>The Dive Watch</h3>
+                            <ul>
+                                <li><strong>The Goal:</strong> Durability and legibility.</li>
+                                <li><strong>Characteristics:</strong> Born for sport, it's robust and highly
+                                    water-resistant. It features a rotating "bezel" (the outer ring) to time dives,
+                                    luminous hands and markers for low-light visibility, and typically a metal bracelet
+                                    or rubber strap.</li>
+                                <li><strong>When to Wear:</strong> This is arguably the most versatile watch. It's the
+                                    "jeans and a t-shirt" watch, the "swimming in the ocean" watch, and (in modern
+                                    times) it's even acceptable with a suit.</li>
+                            </ul>
+
+                            <h3>The Field (or Pilot's) Watch</h3>
+                            <ul>
+                                <li><strong>The Goal:</strong> Readability and ruggedness.</li>
+                                <li><strong>Characteristics:</strong> Originally designed for soldiers and pilots, the
+                                    key here is instant legibility. Field watches feature a high-contrast dial (often
+                                    black with white numerals), large Arabic numerals, and a durable case. They often
+                                    come on a canvas or leather "NATO" strap.</li>
+                                <li><strong>When to Wear:</strong> This is your perfect weekend and casual-wear watch.
+                                    It's tough, unpretentious, and built for adventure.</li>
+                            </ul>
+
+                            <h2>3. Building Your Collection</h2>
+                            <p>Our advice? Start slow and buy what you love. Don't buy a watch as an "investment"; buy
+                                it because you love the way it looks and feels on your wrist.</p>
+                            <p>A great three-watch collection that covers all your bases would be a steel automatic dive
+                                watch, a simple quartz or manual-wind dress watch on a black leather-strap, and a rugged
+                                field watch on a canvas strap. From there, you can explore chronographs (stopwatches),
+                                GMTs (multiple timezones), and the endless world of "microbrands."</p>
+                            <p>A watch is a personal choice that tells the world a little bit about who you are without
+                                you having to say a word. Choose wisely, and wear it in good health.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== PAGE 5: ABOUT US ======== -->
+        <section id="page-about" class="page">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="legal-content">
+                            <h1>About Heritage Gents</h1>
+                            <p class="lead">Welcome to Heritage Gents, your premier online destination for the modern
+                                man navigating the world of style in the USA.</p>
+                            <p>We were founded on a simple belief: style is a personal journey, and "heritage" isn't
+                                about the past—it's about building a legacy of confidence. Our mission is to provide
+                                clear, practical, and inspiring advice for men who want to look and feel their best,
+                                without the fluff or confusing jargon.</p>
+                            <p>We are not about fast fashion or fleeting trends. We are about quality, craftsmanship,
+                                and the timeless principles of good taste. Whether it's the perfect fit of a suit, the
+                                ritual of a quality shave, or the quiet confidence of a fine timepiece, we believe these
+                                details matter.</p>
+                            <p>Our team of writers and enthusiasts is dedicated to curating guides, reviews, and
+                                articles that are relevant to you. We focus on providing detailed, honest information
+                                that you can trust. This website is a resource, a guide, and a community for men who are
+                                "building their heritage," one stylish choice at a time.</p>
+                            <p>Thank you for joining us.</p>
+                            <p><strong>- The Heritage Gents Team</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== PAGE 6: TERMS & CONDITIONS ======== -->
+        <section id="page-terms" class="page">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="legal-content">
+                            <h1>Terms and Conditions</h1>
+                            <p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before
+                                using the heritagegents.store website (the "Service") operated by Heritage Gents ("us",
+                                "we", or "our").</p>
+                            <p>Your access to and use of the Service is conditioned on your acceptance of and compliance
+                                with these Terms. These Terms apply to all visitors, users, and others who access or use
+                                the Service. By accessing or using the Service, you agree to be bound by these Terms. If
+                                you disagree with any part of the terms, then you may not access the Service.</p>
+
+                            <h2>1. Use of the Website</h2>
+                            <p>You agree to use this Service for lawful purposes only and in a manner that does not
+                                infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the
+                                Service. You must be at least 18 years of age to use this Service. By using this
+                                Service, you warrant that you are at least 18 years of age and may legally adhere to
+                                this Agreement.</p>
+
+                            <h2>2. Intellectual Property</h2>
+                            <p>The Service and its original content (excluding content provided by users), features, and
+                                functionality are and will remain the exclusive property of Heritage Gents and its
+                                licensors. The content, including but not limited to text, graphics, logos, images, and
+                                articles, is protected by copyright, trademark, and other laws of the United States and
+                                foreign countries.</p>
+                            <p>Our trademarks and trade dress may not be used in connection with any product or service
+                                without the prior written consent of Heritage Gents. You may not copy, reproduce,
+                                republish, download, post, broadcast, transmit, or otherwise use the content in any way
+                                except for your own personal, non-commercial use.</p>
+
+                            <h2>3. Links To Other Web Sites</h2>
+                            <p>Our Service may contain links to third-party web sites or services that are not owned or
+                                controlled by Heritage Gents.</p>
+                            <p>Heritage Gents has no control over, and assumes no responsibility for, the content,
+                                privacy policies, or practices of any third-party web sites or services. You further
+                                acknowledge and agree that Heritage Gents shall not be responsible or liable, directly
+                                or indirectly, for any damage or loss caused or alleged to be caused by or in connection
+                                with the use of or reliance on any such content, goods, or services available on or
+                                through any such web sites or services.</p>
+                            <p>We strongly advise you to read the terms and conditions and privacy policies of any
+                                third-party web sites or services that you visit.</p>
+
+                            <h2>4. Disclaimer</h2>
+                            <p>Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and
+                                "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether
+                                express or implied, including, but not limited to, implied warranties of
+                                merchantability, fitness for a particular purpose, non-infringement, or course of
+                                performance.</p>
+                            <p>The content on heritagegents.store is provided for general information only. It is not
+                                intended to be and should not be relied upon as the sole basis for making decisions. Any
+                                reliance on the material on this Service is at your own risk. We do not warrant that any
+                                information, advice, or content on the Service is accurate, complete, or current.</p>
+
+                            <h2>5. Limitation of Liability</h2>
+                            <p>In no event shall Heritage Gents, nor its directors, employees, partners, agents,
+                                suppliers, or affiliates, be liable for any indirect, incidental, special,
+                                consequential, or punitive damages, including without limitation, loss of profits, data,
+                                use, goodwill, or other intangible losses, resulting from (i) your access to or use of
+                                or inability to access or use the Service; (ii) any conduct or content of any third
+                                party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized
+                                access, use, or alteration of your transmissions or content, whether based on warranty,
+                                contract, tort (including negligence), or any other legal theory, whether or not we have
+                                been informed of the possibility of such damage, and even if a remedy set forth herein
+                                is found to have failed of its essential purpose.</p>
+
+                            <h2>6. Indemnification</h2>
+                            <p>You agree to defend, indemnify, and hold harmless Heritage Gents and its licensee and
+                                licensors, and their employees, contractors, agents, officers, and directors, from and
+                                against any and all claims, damages, obligations, losses, liabilities, costs or debt,
+                                and expenses (including but not limited to attorney's fees), resulting from or arising
+                                out of a) your use and access of the Service, or b) a breach of these Terms.</p>
+
+                            <h2>7. Governing Law</h2>
+                            <p>These Terms shall be governed and construed in accordance with the laws of the State of
+                                Delaware, United States, without regard to its conflict of law provisions.</p>
+                            <p>Our failure to enforce any right or provision of these Terms will not be considered a
+                                waiver of those rights. If any provision of these Terms is held to be invalid or
+                                unenforceable by a court, the remaining provisions of these Terms will remain in effect.
+                                These Terms constitute the entire agreement between us regarding our Service, and
+                                supersede and replace any prior agreements we might have between us regarding the
+                                Service.</p>
+
+                            <h2>8. Changes to These Terms</h2>
+                            <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any
+                                time. If a revision is material, we will try to provide at least 30 days' notice prior
+                                to any new terms taking effect. What constitutes a material change will be determined at
+                                our sole discretion.</p>
+                            <p>By continuing to access or use our Service after those revisions become effective, you
+                                agree to be bound by the revised terms. If you do not agree to the new terms, please
+                                stop using the Service.</p>
+
+                            <h2>9. Contact Us</h2>
+                            <p>If you have any questions about these Terms, please contact us via email:</p>
+                            <p><strong>Email:</strong> info@heritagegents.store</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== PAGE 7: PRIVACY POLICY ======== -->
+        <section id="page-privacy" class="page">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="legal-content">
+                            <h1>Privacy Policy</h1>
+                            <p>Heritage Gents ("us", "we", or "our") operates the heritagegents.store website (the
+                                "Service"). This page informs you of our policies regarding the collection, use, and
+                                disclosure of personal data when you use our Service and the choices you have associated
+                                with that data.</p>
+                            <p>We use your data to provide and improve the Service. By using the Service, you agree to
+                                the collection and use of information in accordance with this policy. Unless otherwise
+                                defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings
+                                as in our Terms and Conditions.</p>
+
+                            <h2>1. Information Collection and Use</h2>
+                            <p>We collect several different types of information for various purposes to provide and
+                                improve our Service to you.</p>
+                            <h3>Types of Data Collected:</h3>
+                            <ul>
+                                <li><strong>Personal Data:</strong> While using our Service, we may ask you to provide
+                                    us with certain personally identifiable information that can be used to contact or
+                                    identify you ("Personal Data"). This may include, but is not limited to: Email
+                                    address, First name and last name, Cookies and Usage Data.</li>
+                                <li><strong>Usage Data:</strong> We may also collect information on how the Service is
+                                    accessed and used ("Usage Data"). This Usage Data may include information such as
+                                    your computer's Internet Protocol (IP) address, browser type, browser version, the
+                                    pages of our Service that you visit, the time and date of your visit, the time spent
+                                    on those pages, unique device identifiers, and other diagnostic data.</li>
+                                <li><strong>Tracking & Cookies Data:</strong> We use cookies and similar tracking
+                                    technologies to track the activity on our Service and hold certain information.
+                                    Cookies are files with a small amount of data which may include an anonymous unique
+                                    identifier. You can instruct your browser to refuse all cookies or to indicate when
+                                    a cookie is being sent. However, if you do not accept cookies, you may not be able
+                                    to use some portions of our Service.</li>
+                            </ul>
+
+                            <h2>2. How We Use Your Information</h2>
+                            <p>Heritage Gents uses the collected data for various purposes:</p>
+                            <ul>
+                                <li>To provide, maintain, and improve our Service.</li>
+                                <li>To notify you about changes to our Service.</li>
+                                <li>To provide customer support.</li>
+                                <li>To monitor the usage of our Service and detect/prevent technical issues.</li>
+                                <li>To gather analysis or valuable information so that we can improve our Service.</li>
+                                <li>To provide you with news, special offers, and general information about other goods,
+                                    services, and events which we offer that are similar to those that you have already
+                                    purchased or enquired about unless you have opted not to receive such information.
+                                </li>
+                            </ul>
+
+                            <h2>3. How We Share Your Information</h2>
+                            <p>We do not sell, trade, or rent your personal identification information to others. We may
+                                share generic aggregated demographic information not linked to any personal
+                                identification information regarding visitors and users with our business partners,
+                                trusted affiliates, and advertisers for the purposes outlined above.</p>
+                            <p>We may use third-party Service Providers to monitor and analyze the use of our Service
+                                (e.g., Google Analytics).</p>
+
+                            <h2>4. Data Security</h2>
+                            <p>The security of your data is important to us, but remember that no method of transmission
+                                over the Internet, or method of electronic storage is 100% secure. While we strive to
+                                use commercially acceptable means to protect your Personal Data, we cannot guarantee its
+                                absolute security.</p>
+
+                            <h2>5. Your Data Protection Rights (USA & CCPA)</h2>
+                            <p>Depending on your location, you may have specific rights regarding your personal data.
+                                For example, if you are a resident of California, the California Consumer Privacy Act
+                                (CCPA) provides you with specific rights regarding your personal information, including:
+                            </p>
+                            <ul>
+                                <li>The right to know what personal information is being collected about you.</li>
+                                <li>The right to know whether your personal information is sold or disclosed and to
+                                    whom.</li>
+                                <li>The right to say no to the sale of personal information.</li>
+                                <li>The right to access your personal information.</li>
+                                <li>The right to equal service and price, even if you exercise your privacy rights.</li>
+                            </ul>
+                            <p>To exercise these rights, please contact us at our email address below.</p>
+
+                            <h2>6. Children's Privacy</h2>
+                            <p>Our Service does not address anyone under the age of 18 ("Children"). We do not knowingly
+                                collect personally identifiable information from anyone under the age of 18. If you are
+                                a parent or guardian and you are aware that your Children has provided us with Personal
+                                Data, please contact us. If we become aware that we have collected Personal Data from
+                                children without verification of parental consent, we take steps to remove that
+                                information from our servers.</p>
+
+                            <h2>7. Links to Other Websites</h2>
+                            <p>Our Service may contain links to other sites that are not operated by us. If you click on
+                                a third-party link, you will be directed to that third-party's site. We strongly advise
+                                you to review the Privacy Policy of every site you visit. We have no control over and
+                                assume no responsibility for the content, privacy policies, or practices of any
+                                third-party sites or services.</p>
+
+                            <h2>8. Changes to This Privacy Policy</h2>
+                            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by
+                                posting the new Privacy Policy on this page. We will let you know via email and/or a
+                                prominent notice on our Service, prior to the change becoming effective and update the
+                                "Last Updated" date at the top of this Privacy Policy.</p>
+                            <p>You are advised to review this Privacy Policy periodically for any changes. Changes to
+                                this Privacy Policy are effective when they are posted on this page.</p>
+
+                            <h2>9. Contact Us</h2>
+                            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                            <p><strong>Email:</strong> info@heritagegents.store</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row">
+
+                <!-- About Column -->
+                <div class="col-md-5 mb-4">
+                    <img src="images/logo.png" alt="logo" width="150">
+                    <p>Your definitive guide to modern men's style, grooming, and lifestyle. We are dedicated to
+                        providing high-quality, trustworthy content for the discerning man in the USA.</p>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="col-md-4 mb-4">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" data-page="page-home">Home</a></li>
+                        <li><a href="#" data-page="page-article-1">The Modern Suit</a></li>
+                        <li><a href="#" data-page="page-article-2">Grooming Essentials</a></li>
+                        <li><a href="#" data-page="page-article-3">Guide to Watches</a></li>
+                        <li><a href="#" data-page="page-about">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Column -->
+                <div class="col-md-3 mb-4">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" data-page="page-privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-page="page-terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="row">
+                <div class="col-12 footer-bottom">
+                    <p>&copy; All rights reserved.</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Page Navigation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const navLinks = document.querySelectorAll('a[data-page]');
+            const pages = document.querySelectorAll('.page');
+            const mainNavLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+            function showPage(pageId) {
+                // Hide all pages
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+
+                // Show the target page
+                const targetPage = document.getElementById(pageId);
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                }
+
+                // Update active state in nav
+                mainNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-page') === pageId) {
+                        link.classList.add('active');
+                        // For mobile menu, close it after click
+                        const navbarCollapse = document.getElementById('navbarNav');
+                        if (navbarCollapse.classList.contains('show')) {
+                            bootstrap.Collapse.getOrCreateInstance(navbarCollapse).hide();
+                        }
+                    }
+                });
+
+                // Scroll to top of the page on navigation
+                window.scrollTo(0, 0);
+            }
+
+            // Add click event to all nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault(); // Stop the link from jumping to '#'
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+
+            // Ensure the home page is shown on initial load
+            // This is handled by default by adding the 'active' class in the HTML,
+            // but this is a good place to set it dynamically if needed.
+            // showPage('page-home'); 
+        });
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/690dc0f294c005195f5e5cba/1j9erjd9v';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+</body>
+
+</html>
